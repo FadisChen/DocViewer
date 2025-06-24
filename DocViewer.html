@@ -1047,7 +1047,7 @@ P->>U: 顯示結果
                     modalDiagram.innerHTML = '';
                     modalDiagram.appendChild(currentDiagram);
                     modal.style.display = 'block';
-                    currentScale = 1;
+                    currentScale = 1.5;
                     currentX = 0;
                     currentY = 0;
                     lastX = 0;
@@ -1075,7 +1075,7 @@ P->>U: 顯示結果
             modalDiagram.addEventListener('wheel', function (e) {
                 e.preventDefault();
                 const delta = e.deltaY;
-                const scaleChange = 1 - delta * 0.001;
+                const scaleChange = 1 - delta * 0.003;
                 const newScale = currentScale * scaleChange;
 
                 // 限制縮放範圍
